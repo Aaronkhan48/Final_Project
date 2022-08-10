@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='css/fp.css') }}">
+    <title>Final</title>  
+</head>
+<body>
+    <h1>Final Project</h1>
+
+    <div class ="container">
+        <div class = "cont">
+            <div class = "col">
+                <form class="data" action = "{{url_for('thankyou')}}" method = "POST" id = "data" name ="data">
+                    <label class = "email" for="email">Email</label><br><br>
+                    <input type="email" id="email" name="email"><br><br>
+
+                    <label class = "height" for="height">Height (cm)</label><br><br>
+                    <input type="number" id="height" name= "height"><br><br>
+      
+                    <label class = "weight" for="weight">Weight (kg)</label><br><br>
+                    <input type="number" id="weight" name = "weight"> <br><br>
+
+                    <input class = "butt" type="submit" value="Submit">
+                  </form>
+            </div>
+            
+            <br><button class = "calc" id="btn">Calculate</button>
+        </div>
+            
+        <div class = "cont">
+            <label class = "email" for="height">Height (in)</label><br><br>
+            <input type="text" id="height2"><br><br>
+      
+            <label class = "email" for="Weight">Weight (lbs)</label><br><br>
+            <input type="text" id="weight2"> <br><br>
+            <button class = "calc" id="btn2">Convert</button>
+            <div id = "result2" class = "result2"> </div>
+    </div>   
+   
+
+    <div class = "container2">
+        <div class = "cont2">
+            <div id = "result" class = "result"></div>
+            
+        </div>
+
+        
+        
+    </div>
+    
+    
+
+    <script src = "{{ url_for('static', filename='js/fp.js') }}"></script>
+</body>
+</html>
